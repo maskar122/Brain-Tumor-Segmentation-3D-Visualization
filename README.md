@@ -2,8 +2,8 @@
 
 ## Demo
 
-![Demo](assets/[Segmentation/SEG/Screenshot (971)](https://github.com/maskar122/Brain-Tumor-Segmentation-3D-Visualization/blob/136d86601f2525c36e6de7974cbe59329f1676c7/Segmentation/SEG/Screenshot%20(971).png)
 
+![Brain-Tumor-Segmentation-3D-Visualization](https://github.com/maskar122/Brain-Tumor-Segmentation-3D-Visualization/blob/136d86601f2525c36e6de7974cbe59329f1676c7/Segmentation/SEG/Screenshot%20(971).png)
 A Deep Learning-based medical imaging project for automated brain tumor segmentation and interactive 2D/3D visualization using MRI scans from the BraTS2020 dataset.
 
 The system utilizes **DynUNet 3D** architecture with the **MONAI framework** and **PyTorch** to perform accurate volumetric tumor segmentation and generate interactive visualizations for medical analysis.
