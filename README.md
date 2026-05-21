@@ -2,7 +2,7 @@
 
 ## Demo
 
-![Demo](assets/demo.png)
+![Demo](assets/Segmentation/SEG/Screenshot (971).png)
 
 A Deep Learning-based medical imaging project for automated brain tumor segmentation and interactive 2D/3D visualization using MRI scans from the BraTS2020 dataset.
 
