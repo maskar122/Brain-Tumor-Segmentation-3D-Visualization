@@ -1,6 +1,3 @@
-تمام، إليك ملف `README.md` كاملاً وجاهزاً للنسخ واللصق:
-
-```markdown
 # 🧠 Brain Tumor Segmentation & 3D Visualization
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
@@ -169,5 +166,6 @@ AI Engineer | Computer Vision & Medical Imaging
 - [BraTS Challenge](https://www.med.upenn.edu/brats2020/) for the dataset
 - [MONAI](https://monai.io/) for medical imaging tools
 - [PyTorch](https://pytorch.org/) team
+```
 
----
+
