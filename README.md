@@ -171,12 +171,3 @@ AI Engineer | Computer Vision & Medical Imaging
 - [PyTorch](https://pytorch.org/) team
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
----
-
-الملف الآن جاهز بالكامل. فقط انسخه والصقه في ملف `README.md` الخاص بمشروعك على GitHub 🎯
