@@ -85,14 +85,15 @@ text
 ```bash
 git clone https://github.com/maskar122/Brain-Tumor-Segmentation-3D-Visualization.git
 cd Brain-Tumor-Segmentation-3D-Visualization
-2. Set Up Environment
+
+### 2. Set Up Environment
 bash
 python -m venv venv
 source venv/bin/activate      # Linux/Mac
 venv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
-3. Download BraTS2020 Dataset
+### 3. Download BraTS2020 Dataset
 Place the dataset in the data/ folder with the following structure:
 
 text
@@ -100,14 +101,14 @@ data/
 ├── BraTS2020_TrainingData/
 ├── BraTS2020_ValidationData/
 └── BraTS2020_TrainingData/
-4. Run Training
+### 4. Run Training
 bash
 python training/train.py --config configs/default.yaml
-5. Run Inference & Visualization
+### 5. Run Inference & Visualization
 bash
 python inference/predict.py --input data/sample_mri.nii.gz --output outputs/
 python visualization/visualize_3d.py --mask outputs/prediction.nii.gz
-📈 Results
+### 📈 Results
 The model achieves competitive Dice similarity scores on the BraTS2020 validation set:
 
 Tumor Region	Dice Score
