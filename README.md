@@ -1,3 +1,6 @@
+تمام، إليك ملف `README.md` كاملاً وجاهزاً للنسخ واللصق:
+
+```markdown
 # 🧠 Brain Tumor Segmentation & 3D Visualization
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
@@ -11,18 +14,16 @@
 ![Demo 2](https://github.com/maskar122/Brain-Tumor-Segmentation-3D-Visualization/blob/2947163a8aa626eb56a867a91f63a91eb8ac6a17/Segmentation/SEG/Screenshot%20(974).png)
 ![Demo 3](https://github.com/maskar122/Brain-Tumor-Segmentation-3D-Visualization/blob/6863bf9ecf9798d900f41b02de575fa390805076/Segmentation/SEG/Screenshot%20(975).png)
 
-A production-ready deep learning pipeline for **volumetric brain tumor segmentation** using the **BraTS2020** dataset. Built with **DynUNet 3D** and **MONAI**, this project delivers accurate tumor masks and provides interactive 2D slice visualization alongside **3D mesh reconstruction** for clinical analysis and research.
-
 ---
 
 ## ✨ Key Features
 
-- 🧬 **3D Volumetric Segmentation** – DynUNet 3D architecture for precise voxel-level tumor detection.
-- 🖥️ **Interactive 2D Visualization** – Overlay predicted masks and ground truth on MRI slices.
-- 🌐 **Interactive 3D Mesh Visualization** – Reconstruct and explore tumor volumes with Plotly.
-- 🚀 **GPU Acceleration** – Optimized inference with CUDA support.
-- 🩻 **Multi-modal MRI Support** – Handles T1, T1Gd, T2, and FLAIR sequences.
-- 📦 **End-to-End Pipeline** – From data preprocessing to inference and visualization.
+- 🧬 **3D Volumetric Segmentation** – DynUNet 3D architecture for precise voxel-level tumor detection
+- 🖥️ **Interactive 2D Visualization** – Overlay predicted masks and ground truth on MRI slices
+- 🌐 **Interactive 3D Mesh Visualization** – Reconstruct and explore tumor volumes with Plotly
+- 🚀 **GPU Acceleration** – Optimized inference with CUDA support
+- 🩻 **Multi-modal MRI Support** – Handles T1, T1Gd, T2, and FLAIR sequences
+- 📦 **End-to-End Pipeline** – From data preprocessing to inference and visualization
 
 ---
 
@@ -41,11 +42,16 @@ A production-ready deep learning pipeline for **volumetric brain tumor segmentat
 
 This project uses the [BraTS2020](https://www.med.upenn.edu/brats2020/) (Brain Tumor Segmentation Challenge) dataset.
 
-- **Modalities**: T1, T1Gd, T2, FLAIR
-- **Ground Truth**: Segmentation masks with labels:
-  - Label 1: Necrotic and Non-enhancing Tumor Core
-  - Label 2: Peritumoral Edema
-  - Label 4: Enhancing Tumor
+**Modalities:**
+- T1
+- T1Gd
+- T2
+- FLAIR
+
+**Ground Truth Segmentation Labels:**
+- Label 1: Necrotic and Non-enhancing Tumor Core
+- Label 2: Peritumoral Edema
+- Label 4: Enhancing Tumor
 
 > ⚠️ Due to dataset size, you must download BraTS2020 separately from the official source.
 
@@ -63,18 +69,19 @@ This project uses the [BraTS2020](https://www.med.upenn.edu/brats2020/) (Brain T
 ---
 
 ## 📁 Project Structure
-├── assets/ # Images and demo assets
-├── data/ # Raw BraTS2020 data (not included)
-├── models/ # Saved model weights
-├── notebooks/ # Jupyter notebooks for exploration
-├── training/ # Training scripts and configs
-├── inference/ # Inference pipeline
-├── visualization/ # 2D/3D visualization modules
-├── outputs/ # Segmentation results and plots
-├── requirements.txt # Dependencies
-└── README.md
 
-text
+```
+├── assets/                 # Images and demo assets
+├── data/                   # Raw BraTS2020 data (not included)
+├── models/                 # Saved model weights
+├── notebooks/              # Jupyter notebooks for exploration
+├── training/               # Training scripts and configs
+├── inference/              # Inference pipeline
+├── visualization/          # 2D/3D visualization modules
+├── outputs/                # Segmentation results and plots
+├── requirements.txt        # Dependencies
+└── README.md
+```
 
 ---
 
@@ -85,59 +92,91 @@ text
 ```bash
 git clone https://github.com/maskar122/Brain-Tumor-Segmentation-3D-Visualization.git
 cd Brain-Tumor-Segmentation-3D-Visualization
+```
 
 ### 2. Set Up Environment
-bash
+
+```bash
 python -m venv venv
 source venv/bin/activate      # Linux/Mac
 venv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
-### 3. Download BraTS2020 Dataset
-Place the dataset in the data/ folder with the following structure:
+```
 
-text
+### 3. Download BraTS2020 Dataset
+
+Place the dataset in the `data/` folder with the following structure:
+
+```
 data/
 ├── BraTS2020_TrainingData/
 ├── BraTS2020_ValidationData/
-└── BraTS2020_TrainingData/
+└── BraTS2020_TestingData/
+```
+
 ### 4. Run Training
-bash
+
+```bash
 python training/train.py --config configs/default.yaml
+```
+
 ### 5. Run Inference & Visualization
-bash
+
+```bash
 python inference/predict.py --input data/sample_mri.nii.gz --output outputs/
 python visualization/visualize_3d.py --mask outputs/prediction.nii.gz
-### 📈 Results
+```
+
+---
+
+## 📈 Results
+
 The model achieves competitive Dice similarity scores on the BraTS2020 validation set:
 
-Tumor Region	Dice Score
-Whole Tumor	0.89
-Tumor Core	0.85
-Enhancing Tumor	0.82
-📌 Results may vary based on training configuration and data split.
+| Tumor Region | Dice Score |
+|--------------|------------|
+| Whole Tumor | 0.89 |
+| Tumor Core | 0.85 |
+| Enhancing Tumor | 0.82 |
 
-🔮 Future Improvements
-✅ Integrate Transformer-based models (SwinUNETR, nnFormer)
+> 📌 *Results may vary based on training configuration and data split.*
 
-🌐 Deploy as a web-based medical imaging tool (Streamlit/FastAPI)
+---
 
-🧪 Support for multi-class tumor substructure segmentation
+## 🔮 Future Improvements
 
-📄 Automated clinical reporting from segmentation outputs
+- ✅ Integrate **Transformer-based models** (SwinUNETR, nnFormer)
+- 🌐 Deploy as a **web-based medical imaging tool** (Streamlit/FastAPI)
+- 🧪 Support for **multi-class tumor substructure segmentation**
+- 📄 Automated **clinical reporting** from segmentation outputs
+- ⚡ Real-time inference with TensorRT optimization
 
-⚡ Real-time inference with TensorRT optimization
+---
 
-👨‍💻 Author
-Mohamed Essam Askar
+## 👨‍💻 Author
+
+**Mohamed Essam Askar**  
 AI Engineer | Computer Vision & Medical Imaging
 
-https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin
-https://img.shields.io/badge/GitHub-Follow-181717?logo=github
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/mohamed-askar-aa967b256/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?logo=github)](https://github.com/maskar122)
 
-🙏 Acknowledgements
-BraTS Challenge for the dataset
+---
 
-MONAI for medical imaging tools
+## 🙏 Acknowledgements
 
-PyTorch team
+- [BraTS Challenge](https://www.med.upenn.edu/brats2020/) for the dataset
+- [MONAI](https://monai.io/) for medical imaging tools
+- [PyTorch](https://pytorch.org/) team
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+
+---
+
+الملف الآن جاهز بالكامل. فقط انسخه والصقه في ملف `README.md` الخاص بمشروعك على GitHub 🎯
